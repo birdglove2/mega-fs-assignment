@@ -1,9 +1,26 @@
 import { Box, Skeleton } from '@mui/material';
-import { SkeletonBox } from '../../components/ui-components';
+import { useEffect } from 'react';
+import { CustomError, SkeletonBox } from '../../components/ui-components';
+import { useError } from '../../hooks';
 
 const HomepageSkeleton = () => {
+  const { isError, setIsError, handleCloseError } = useError();
+
+  useEffect(() => {
+    let timer = setTimeout(() => setIsError(true), 3000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [isError]);
+
   return (
     <div class="flex flex-col items-center mt-40 ">
+      <CustomError
+        handleCloseError={handleCloseError}
+        errorMessage={'You should be on Rinkeby to login'}
+        isError={isError}
+      />
       <div class="flex flex-row justify-start items-left w-1/2 -ml-20">
         <Box class="w-24 p-2 mr-2 border-2 ">
           <Skeleton variant="text" />

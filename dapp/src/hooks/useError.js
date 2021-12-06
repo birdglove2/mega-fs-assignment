@@ -8,11 +8,12 @@ const useError = () => {
   const handleCloseError = () => setIsError(false);
 
   const handleError = (err) => {
+    console.log('err', err);
     setErrorMessage(err.message);
     handleOpenError();
   };
 
-  return { handleError, handleCloseError, isError, errorMessage };
+  return { handleError, handleCloseError, isError, setIsError, errorMessage };
 };
 
 export default useError;
