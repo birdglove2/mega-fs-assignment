@@ -6,4 +6,4 @@ There are 2 parts
 1. DApp Development : Simple Compound
 2. Algorithm Programming
 
-Please read through `README.md` in to each directory to follow the project correctly
+Please read through `README.md` in each directory to follow the project correctly
