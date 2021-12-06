@@ -1,8 +1,8 @@
-### About
+# About
 
-This algorithm is the python function to solve the question
+This algorithm is the python function to solve the following question
 
-### Question
+# Question
 
 Write a function solve(wordList, target) in any language to solve the following problem:
 
@@ -13,15 +13,15 @@ Write a function solve(wordList, target) in any language to solve the following 
   2. wordList = [“ab”, “bc”, “cd”], target = “cdab” ==> output = (“ab”, “cd”) or (“cd”, “ab”)
   3. wordList = [“ab”, “bc”, “cd”], target = “abab” ==> output = None
 
-### Answer
+# Answer
 
 1. `Brute force` - Iterate through the wordList using i and j, pair every element possible and compare with the target. Return the pairs if found one. Return None if there is no match.
    Time Complexity is O(n^2) from matching every pair possible. Space Complexity is O(1)
 
 2. `Replace` - Iterate through the wordList, if found word in wordList such that it is also part of the target, keep the word and iterate to the next element.
-   Time Complexity is O(nk) where k is the length of target word after every replacement. Space Complexity is O(1)
+   Time Complexity is O(nk) where k is the length of target word after every replacement which is 2 in this case. Space Complexity is O(1)
 
-### Start
+# Getting Started
 
 ```
 python3 main.py
