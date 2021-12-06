@@ -1,22 +1,6 @@
 import { openInNewTab } from '../../utils/function';
 import { Modal, Box, Typography, Link, Button } from '@mui/material';
 
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -80%)',
-  width: '20rem',
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
-  borderRadius: '5px',
-  boxShadow: 24,
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  alignItems: 'center',
-};
-
 const TransactionModal = ({ modalOpen, handleModalClose, txHash }) => {
   const url = `https://rinkeby.etherscan.io/tx/${txHash}`;
   return (
@@ -27,10 +11,9 @@ const TransactionModal = ({ modalOpen, handleModalClose, txHash }) => {
       aria-describedby="modal-modal-description"
     >
       <Box
-        // class="flex flex-col justify-center items-center w-80 bg-white
-        //           border-2 border-black shadow-md
-        //           absoulute top-1/2 left-1/2 transform translate-x-full translate-y-full"
-        sx={style}
+        class="flex flex-col justify-center items-center w-80 bg-white
+                  border-2 border-black shadow-md
+                  absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
       >
         <Typography class="m-2 p-2 font-medium ">Transaction Submitted</Typography>
         <div class="pb-2 mb-4 font-medium ">
