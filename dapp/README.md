@@ -1,5 +1,5 @@
 # Dapp Development : Simple Compound
-This is a simple version of Compound UI which can only supply/withdraw ETH to the protocol on Rinkeby Testnet
+This is a simple version of Compound UI which can only supply/withdraw ETH to the protocol on `Rinkeby Testnet` only
 
 # Getting Started 
 
