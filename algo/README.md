@@ -19,7 +19,7 @@ Write a function solve(wordList, target) in any language to solve the following 
    Time Complexity is O(n^2) from matching every pair possible. Space Complexity is O(1)
 
 2. `Replace` - Iterate through the wordList, if found word in wordList such that it is also part of the target, keep the word and iterate to the next element.
-   Time Complexity is O(nk) where k is the length of target word after every replacement. Space Complexity is O(1)
+   Time Complexity is O(nk) where k is the length of target word after every replacement which is 2 in this case. Space Complexity is O(1)
 
 # Getting Started
 
