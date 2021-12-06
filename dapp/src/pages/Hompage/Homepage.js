@@ -41,8 +41,8 @@ const Homepage = () => {
   const fetchReceiving = (amount, from) => {
     if (amount === 0) return 0;
     let res;
-    if (from === CURRENCY.ETH) res = (amount / (exchangeRate * 10 ** -18)) * 10 ** -8;
-    if (from === CURRENCY.cETH) res = amount * (exchangeRate * 10 ** -18) * 10 ** 8;
+    if (from === CURRENCY.ETH) res = amount / exchangeRate;
+    if (from === CURRENCY.cETH) res = amount * exchangeRate;
     setReceiving(round3decimal(res));
   };
 
