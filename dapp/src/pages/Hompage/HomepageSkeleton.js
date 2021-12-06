@@ -1,5 +1,5 @@
 import { Box, Skeleton } from '@mui/material';
-import SkeletonBox from '../../components/CustomBox/SkeletonBox';
+import { SkeletonBox } from '../../components/ui-components';
 
 const HomepageSkeleton = () => {
   return (
