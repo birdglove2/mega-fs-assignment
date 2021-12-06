@@ -60,13 +60,13 @@ const Homepage = () => {
     const mantissa = 18 + underlyingDecimal - cTokenDecimals;
     const exchangeRate = exchange_rate_current / Math.pow(10, mantissa);
 
-    const my_supply_eth = cETH_balance * 10 ** -cTokenDecimals * exchangeRate;
-    const total_supply_eth = cETH_total_supply * 10 ** -cTokenDecimals * exchangeRate;
+    const mySupplyEth = cETH_balance * 10 ** -cTokenDecimals * exchangeRate;
+    const totalSupplyEth = cETH_total_supply * 10 ** -cTokenDecimals * exchangeRate;
 
     setExchangeRate(exchangeRate);
     setCEthBalance(round3decimal(+cETH_balance * 10 ** -+cTokenDecimals));
-    setMySupply(round3decimal(my_supply_eth));
-    setTotalSupply(round3decimal(total_supply_eth));
+    setMySupply(round3decimal(mySupplyEth));
+    setTotalSupply(round3decimal(totalSupplyEth));
   };
 
   const fetchAPY = async () => {
@@ -123,6 +123,7 @@ const Homepage = () => {
       fetchContractDetail();
       fetchAPY();
     }
+    setActionValue(0);
   }, [account, modalOpen]);
 
   useEffect(() => {
