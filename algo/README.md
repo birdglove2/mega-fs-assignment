@@ -1,6 +1,6 @@
 # About
 
-This algorithm is the python function to solve the question
+This algorithm is the python function to solve the following question
 
 # Question
 
